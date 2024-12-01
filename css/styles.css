@@ -170,6 +170,14 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  .online-presence .image-container,
+  .online-presence img {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .image-container {
   margin-right: 15px;
 }
