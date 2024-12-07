@@ -27,19 +27,19 @@ body {
   background: #ffffff;
 }
 
-/* .container {
+.container {
   margin: 0 auto;
   width: 100%;
   max-width: 1080px;
-} */
-
-.section {
-  padding: 20px 45px;
-  margin: 0 auto;
 }
 
 .section.dental-marketing-hero {
 	padding-top: 0;
+}
+
+.section {
+  padding: 20px 45px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) and (max-width: 1149px) {
@@ -384,4 +384,139 @@ body {
 
 .growth-tips__conclusion h2 {
   text-align: center;
+}
+
+/* Сelebrity smiles */
+.section.celebrity-smiles-hero {
+  padding-top: 0;
+}
+
+.smile-categories__title {
+  text-align: center;
+}
+
+.smile-categories__image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.smile-categories img {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.smile-categories__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 45px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .smile-categories__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.smile-categories__item {
+  background-color: rgba(0, 120, 171, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.demographics ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.closing-thoughts {
+  border-radius: 20px;
+}
+
+.closing-thoughts h2 {
+  text-align: center;
+}
+
+.closing-thoughts p {
+  text-align: center;
+}
+
+.least-recognized__image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.smile-quiz ul {
+  display: grid;
+  grid-template-columns: repeat(3, 301px);
+  gap: 40px;
+  list-style-type: none;
+}
+
+@media (min-width: 768px) and (max-width: 1149px) {
+  .smile-quiz ul {
+    grid-template-columns: repeat(2, 301px);
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .smile-quiz ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.smile-image {
+  position: relative;
+  cursor: pointer;
+}
+
+.smile-tooltip {
+  position: absolute;
+  display: none;
+  min-width: 230px;
+  min-height: 150px;
+  z-index: 1000;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  font-size: 24px;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.smile-tooltip.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.smile-tooltip-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  text-align: center;
+  line-height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 50%;
+}
+
+.smile-tooltip-close:hover {
+  background-color: #e0e0e0;
 }
