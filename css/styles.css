@@ -21,10 +21,102 @@ html {
 
 body {
   margin: 0;
+  padding-top: 67px;
   min-width: 320px;
   font-family: "Roboto Light V2", "Arial", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 16px;
   background: #ffffff;
+}
+
+/* Header */
+.arrow {
+  display: inline-block;
+  margin-bottom: 2px;
+  margin-left: 8px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #0078ab;
+  transition: transform 0.3s ease;
+}
+
+.has-dropdown:hover .arrow {
+  transform: rotate(180deg);
+}
+
+.main-header {
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.menu {
+  margin: 0;
+  padding: 0;
+  margin-right: 215px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
+}
+
+.menu-item {
+  padding: 1rem 0;
+  display: inline-block;
+  position: relative;
+}
+
+.menu-item a {
+  color: #333333;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
+}
+
+.menu-item a:hover {
+  color: #0078ab;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-width: 355px;
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li a {
+  padding: 0.75rem 1rem;
+  display: block;
+}
+
+.dropdown li a:hover {
+  background: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .dropdown {
+      position: static;
+      box-shadow: none;
+      padding-left: 1rem;
+  }
+  
+  .menu-item {
+      display: block;
+  }
 }
 
 .container {
